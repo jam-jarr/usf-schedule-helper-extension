@@ -1,0 +1,20 @@
+{
+  "name": "USF Schedule Helper",
+  "description": "An extension to help with USF course schedules",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "host_permissions": [
+    "https://degreeworks.usf.edu/worksheets/*"
+  ],
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://degreeworks.usf.edu/worksheets/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
